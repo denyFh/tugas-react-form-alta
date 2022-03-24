@@ -9,6 +9,8 @@
 
 .formControl {
     padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid white;
 }
 
 .formGroup input[type="text"], 
@@ -20,7 +22,60 @@
     max-width: 100%;
 }
 
+.formGroup input[type="radio"] {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+    margin-right: 0.5rem;
+}
+
 .formGroup label{
     display: block;
     margin-bottom: 0.25rem;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttonGroup button {
+    margin-top: 0.5rem;
+    padding: 0.55rem 2rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+.buttonGroup button:hover {
+    transform: translateY(-3px);
+    transition: all ease-in 100ms;
+}
+
+.buttonGroup button.submit {
+    background-color: rgb(67, 230, 129);
+}
+
+.buttonGroup button.submit:hover {
+    background-color: rgb(20, 172, 78);
+    color: white;
+}
+
+.buttonGroup button.reset {
+    background-color: rgb(240, 64, 64);
+}
+
+.buttonGroup button.reset:hover {
+    background-color: rgb(160, 17, 17);
+    color: white;
+}
+
+.form p.m0 {
+    margin: 0;
+    margin-top: 0.5rem;
+}
+
+.listContainer {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
 }
