@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useState, useRef } from 'react';
+import Form from './components/Form';
 import './App.css';
 
 function App() {
+  const baseData = {
+    nama: "",
+    email: "",
+    noHp: "",
+    pendidikan: "",
+    kelas: "",
+    harapan: "",
+  };
+
+  const baseError = {
+    nama: "",
+    email: "",
+    noHp: "",
+
+  };
+
+  const suratKesungguhan = useRef(null);
+  const [data, setData] = useState(baseData);
+  const [errorMsg, setErrorMsg] = useState(baseError);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Pendaftaran Peserta Coding Bootcamp</h1>
+      <Form inputs={data} setInputs={setData} errorMsg={errorMsg} setErrorMsg={setErrorMsg} fileRef={suratKesungguhan}/>
     </div>
   );
 }
